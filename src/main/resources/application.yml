@@ -74,3 +74,6 @@ knife4j:
         api-rule: package
         api-rule-resources:
           - com.jieni.aianswer.controller
+# AI 配置
+ai:
+  apiKey: bd3ee0b1c03a46748be45c860f691267.7ybvP1izejfxCD6G

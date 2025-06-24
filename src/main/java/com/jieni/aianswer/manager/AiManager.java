@@ -1,7 +1,8 @@
-package com.yupi.yudada.manager;
+package com.jieni.aianswer.manager;
 
-import com.yupi.yudada.common.ErrorCode;
-import com.yupi.yudada.exception.BusinessException;
+
+import com.jieni.aianswer.common.ErrorCode;
+import com.jieni.aianswer.exception.BusinessException;
 import com.zhipu.oapi.ClientV4;
 import com.zhipu.oapi.Constants;
 import com.zhipu.oapi.service.v4.model.ChatCompletionRequest;

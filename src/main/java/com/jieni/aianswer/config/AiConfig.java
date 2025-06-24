@@ -1,4 +1,5 @@
-package com.yupi.yudada.config;
+package com.jieni.aianswer.config;
+
 
 import com.zhipu.oapi.ClientV4;
 import lombok.Data;
