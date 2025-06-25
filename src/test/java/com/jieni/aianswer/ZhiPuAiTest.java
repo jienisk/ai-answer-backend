@@ -25,7 +25,7 @@ public class ZhiPuAiTest {
        // ClientV4 client = new ClientV4.Builder("bd3ee0b1c03a46748be45c860f691267.7ybvP1izejfxCD6G").build();
         // 构建请求
         List<ChatMessage> messages = new ArrayList<>();
-        ChatMessage chatMessage = new ChatMessage(ChatMessageRole.USER.value(), "作为一名营销专家，请为智谱开放平台创作一个吸引人的slogan");
+        ChatMessage chatMessage = new ChatMessage(ChatMessageRole.USER.value(), "作为一名游戏主播，请为堡垒之夜创作一个吸引人的slogan");
         messages.add(chatMessage);
 //        String requestId = String.format(requestIdTemplate, System.currentTimeMillis());
         ChatCompletionRequest chatCompletionRequest = ChatCompletionRequest.builder()
