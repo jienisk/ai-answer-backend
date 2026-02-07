@@ -14,7 +14,10 @@ import java.util.Date;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import static jdk.nashorn.internal.runtime.regexp.joni.Config.log;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;  // 【修改1】新增导入
+
+//import static jdk.nashorn.internal.runtime.regexp.joni.Config.log;
 
 /**
  * 用户答案视图
@@ -24,6 +27,7 @@ import static jdk.nashorn.internal.runtime.regexp.joni.Config.log;
  */
 @Data
 public class UserAnswerVO implements Serializable {
+    private static final Logger log = LoggerFactory.getLogger(UserAnswerVO.class);
     /**
      *
      */
@@ -156,8 +160,8 @@ public class UserAnswerVO implements Serializable {
 
         } catch (Exception e) {
             // 记录错误日志，但不让整个请求失败
-            log.print("解析 choices 字段失败，原始值: '{}', 错误: {}");
-
+//            log.print("解析 choices 字段失败，原始值: '{}', 错误: {}");
+            log.error("解析 choices 字段失败，原始值: '{}', 错误: {}", choicesStr, e.getMessage());
             // 尝试最后的挽救：如果是被转义的 JSON 字符串
             try {
                 // 处理可能被转义过的 JSON 字符串
@@ -166,7 +170,8 @@ public class UserAnswerVO implements Serializable {
                     return JSONUtil.toList(unescaped, String.class);
                 }
             } catch (Exception ex) {
-                log.print("二次解析 choices 字段也失败: {}");
+//                log.print("二次解析 choices 字段也失败: {}");
+                log.error("二次解析 choices 字段也失败: {}", ex.getMessage());
             }
 
             // 如果所有解析都失败，返回包含原始值的列表
