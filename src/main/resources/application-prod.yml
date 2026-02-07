@@ -29,32 +29,11 @@ spring:
 #    password: 123456
 mybatis-plus:
   configuration:
-    map-underscore-to-camel-case: false
-    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
-  global-config:
-    db-config:
-      logic-delete-field: isDelete # 全局逻辑删除的实体字段名
-      logic-delete-value: 1 # 逻辑已删除值（默认为 1）
-      logic-not-delete-value: 0 # 逻辑未删除值（默认为 0）
-# 对象存储
-# todo 需替换配置
-cos:
-  client:
-    accessKey: xxx
-    secretKey: xxx
-    region: xxx
-    bucket: xxx
+    # 生产环境关闭日志
+    log-impl: ''
 # 接口文档配置
 knife4j:
-  enable: true
-  openapi:
-    title: "接口文档"
-    version: 1.0
-    group:
-      default:
-        api-rule: package
-        api-rule-resources:
-          - com.jieni.aianswer.controller
-# AI 配置
-ai:
-  apiKey: bd3ee0b1c03a46748be45c860f691267.7ybvP1izejfxCD6G
+  basic:
+    enable: true
+    username: root
+    password: 123456
