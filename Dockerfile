@@ -14,5 +14,8 @@ COPY src ./src
 # Build a release artifact.
 RUN mvn package -DskipTests
 
+# 暴露应用端口
+EXPOSE 8101
+
 # Run the web service on container startup.
 CMD ["java","-jar","/app/target/ai-answer-backend-0.0.1-SNAPSHOT.jar","--spring.profiles.active=prod"]
