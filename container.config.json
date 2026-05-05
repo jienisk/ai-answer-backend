@@ -1,0 +1,30 @@
+{
+  "readinessProbe": {
+    "initialDelaySeconds": 60,
+    "periodSeconds": 10,
+    "timeoutSeconds": 5,
+    "failureThreshold": 3,
+    "successThreshold": 1,
+    "probeHandler": {
+      "httpGet": {
+        "path": "/",
+        "port": 8101,
+        "scheme": "HTTP"
+      }
+    }
+  },
+  "livenessProbe": {
+    "initialDelaySeconds": 60,
+    "periodSeconds": 10,
+    "timeoutSeconds": 5,
+    "failureThreshold": 3,
+    "successThreshold": 1,
+    "probeHandler": {
+      "httpGet": {
+        "path": "/",
+        "port": 8101,
+        "scheme": "HTTP"
+      }
+    }
+  }
+}
