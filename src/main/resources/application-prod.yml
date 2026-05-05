@@ -17,7 +17,7 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://10.14.110.146:3306/aianswer
     username: root
-    password: 123456
+    password: MY8743846!
   # Redis 配置
   # todo 需替换配置
 #  redis:
