@@ -15,9 +15,9 @@ spring:
   # todo 需替换配置
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://10.14.110.146:3306/aianswer
+    url: jdbc:mysql://10.14.110.146:3306/aianswer?useSSL=false&serverTimezone=Asia/Shanghai
     username: root
-    password: MY8743846!
+    password: 'MY8743846!'
   # Redis 配置
   # todo 需替换配置
 #  redis:
