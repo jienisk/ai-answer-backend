@@ -1,6 +1,5 @@
 # 线上配置文件
-# @author <a href="https://github.com/liyupi">程序员鱼皮</a>
-# @from <a href="https://yupi.icu">编程导航知识星球</a>
+# @author <a href="https://github.com/liyupi">jienisk</a>
 server:
   port: 8101
   servlet:
@@ -16,7 +15,7 @@ spring:
   # todo 需替换配置
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/aianswer
+    url: jdbc:mysql://10.14.110.146:3306/aianswer
     username: root
     password: 123456
   # Redis 配置
