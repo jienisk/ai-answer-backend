@@ -36,3 +36,10 @@ knife4j:
     enable: true
     username: root
     password: 123456
+logging:
+  level:
+    root: DEBUG
+    org.springframework.boot: DEBUG
+    org.springframework.context: DEBUG
+    com.zaxxer.hikari: DEBUG
+    org.apache.shardingsphere: DEBUG
